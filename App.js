@@ -21,7 +21,6 @@ export default class extends React.Component {
       }} =  await axios.get(
       `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&APPID=${API_KEY}&units=metric`
     );
-    console.log(name, temp, temp_max, temp_min, weather[0].main, speed)
     this.setState({ 
       isLoading: false, 
       name,
@@ -46,12 +45,13 @@ export default class extends React.Component {
       
       this.getWeather(latitude, longitude);
     } catch (error) {
-      Alert.alert("Can't find you.", "So sad");
+      Alert.alert("위치 확인되지 않음.", "날씨 정보를 가져올 수 없습니다.");
+    } finally {
+      this.setState({ isLoading: false });
     }
   };
   
   componentDidMount() {
-    this.setState({ isLoading: false });
     this.getLocation();
 
   }

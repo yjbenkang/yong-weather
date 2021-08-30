@@ -126,6 +126,7 @@ Weather.propTypes = {
         "Haze",
         "Mist",
         "Dust",
+        undefined
       ]).isRequired
   };
   

@@ -16,10 +16,10 @@ const styles = StyleSheet.create({
       justifyContent:"flex-end",
       paddingHorizontal: 40,
       paddingVertical: 100,
-      backgroundColor: "#FDF6AA"
+      backgroundColor: "black"
     },    
     text:{
-      color: "#2c2c2c",
+      color: "white",
       fontSize: 20
     }
 
