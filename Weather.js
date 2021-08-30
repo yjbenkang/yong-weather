@@ -3,7 +3,8 @@ import { View, Text, StyleSheet, StatusBar } from "react-native";
 import PropTypes from "prop-types";
 import { LinearGradient } from "expo-linear-gradient";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { useFonts } from 'expo-font';
+import Loading from "./Loading";
+
 const weatherOptions = {
     Thunderstorm: {
       iconName: "weather-lightning",
@@ -75,7 +76,9 @@ export const Weather = ({
     tempMax,
     tempMin,
     windSpeed }) => {
-
+    if (condition === undefined){
+        return <Loading/>
+    }
     return (
         <LinearGradient
           colors={weatherOptions[condition].gradient}

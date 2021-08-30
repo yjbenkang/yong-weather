@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "용날씨앱 !",
+    "githubUrl": "https://github.com/yjbenkang/yong-weather"
   }
 }
